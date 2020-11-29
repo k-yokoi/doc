@@ -80,3 +80,9 @@ public class ServiceRegistrationAndDiscoveryClientApplication {
 	}
 }
 ```
+
+### アプリケーションプロパティの設定
+Eureka サーバに登録するクライアント名を設定
+```
+spring.application.name=[client neme]
+```
