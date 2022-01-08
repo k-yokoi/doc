@@ -40,3 +40,18 @@
 
 ### コンテナの削除
 `docker rm [コンテナID]`
+
+## Dockerをsudoなしで実行する方法
+1. dockerグループを作成  
+`sudo groupadd docker`
+
+2. ユーザーをdockerグループに追加  
+`sudo usermod -aG docker $USER`
+
+3. グループを変更  
+`newgrp docker`
+
+4. sudoがなくてもdockerコマンドが実行できることを確認  
+`docker run hello-world`
+
+参考:	[Manage Docker as a non-root user](https://docs.docker.com/engine/install/linux-postinstall/)
